@@ -5,9 +5,9 @@ import numpy as np
 def ShipLogic(round, yourMap, yourHp, enemyHp, p1ShotSeq, p1PrevHit, storage):
     global heatMap, currentAllStates, missedShots
 
-    print(f'num shots: {len(p1ShotSeq)}')
-    if len(p1ShotSeq) != 0:
-        print(f'PREV SHOT: {p1ShotSeq[-1]}')
+    #print(f'num shots: {len(p1ShotSeq)}')
+    # if len(p1ShotSeq) != 0:
+    #     print(f'PREV SHOT: {p1ShotSeq[-1]}')
 
     if len(p1ShotSeq) == 0:
         currentAllStates = generateAllBoardStates()
@@ -93,8 +93,8 @@ def pickMove(heatMap):
     index = np.argmax(heatMap)
     x = int((index / 10)) + 1
     y = index % 10 + 1
-    print(f'MY SHOT: {[x,y]}')
-    print(f'HEATMAP: \n{heatMap.reshape((10, 10))}')
+    #print(f'MY SHOT: {[x,y]}')
+    #print(f'HEATMAP: \n{heatMap.reshape((10, 10))}')
     return [x, y]
 
 def generateBoardStates(shipSize):
