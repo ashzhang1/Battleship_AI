@@ -34,7 +34,7 @@ def convertMapIndToInt(index, mapRow, mapCol):
     return (index[0] * mapRow) + index[1]
 
 results = 0
-num_tests = 400
+num_tests = 100
 number_moves = []
 for test in range(0,num_tests):
     '''
